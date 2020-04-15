@@ -1,10 +1,17 @@
 import React from 'react';
 import './UsersList.scss';
 
-const UsersList = () => {
+const UsersList = props => {
+    const users = props.users.map(user => (
+        <div className="user-data" key={user.login.uuid}>
+            <img src={user.picture.large} alt={user.name.last} />
+            <h4>{`${user.name.first} ${user.name.last}`}</h4>
+            <p>{user.email}</p>
+        </div>
+    ))
     return (
         <div>
-            Użytkownik
+            {users}
         </div>
     )
 }

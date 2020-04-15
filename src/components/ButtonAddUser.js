@@ -1,9 +1,9 @@
 import React from 'react';
 import './ButtonAddUser.scss';
 
-const ButtonAddUser = () => {
+const ButtonAddUser = props => {
     return (
-        <button>Dodaj użytkownika</button>
+        <button onClick={props.click}>Dodaj użytkownika</button>
     )
 }
 
